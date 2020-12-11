@@ -1,0 +1,596 @@
+{
+  "dataSource": {
+    "type": "SqlServer",
+    "config": {
+      "connectionString": "Data Source=localhost;Initial Catalog=SPMUAT3_MSCRM;Integrated Security=SSPI;"
+    }
+  },
+  "dataGeneration": {
+    "locale": "en"
+  },
+  "tables": [
+    {
+      "name": "AccountBase",
+      "primaryKeyColumn": "AccountId",
+      "columns": [
+        {
+          "name": "Name",
+          "type": "Bogus",
+          "stringFormatPattern": "{{company.CompanyName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "YomiName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{company.CompanyName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "Telephone1",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "Telephone2",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "Telephone3",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "Fax",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "EMailAddress1",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Email}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "EMailAddress2",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Email}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "EMailAddress3",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Email}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "WebSiteURL",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Url}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "FtpSiteURL",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Url}}",
+          "retainNullValues": true
+        }
+      ]
+    },
+
+    {
+      "name": "AccountExtensionBase",
+      "primaryKeyColumn": "AccountId",
+      "columns": [
+        {
+          "name": "bct_CompanyNameChinese",
+          "type": "Bogus",
+          "stringFormatPattern": "{{company.CompanyName}}",
+          "retainNullValues": true
+        }
+      ]
+    },
+
+    {
+      "name": "ActivityPartyBase",
+      "primaryKeyColumn": "ActivityId",
+      "columns": [
+        {
+          "name": "AddressUsed",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Email}}",
+          "retainNullValues": true
+        }
+      ]
+    },
+
+    {
+      "name": "ActivityPointerBase",
+      "primaryKeyColumn": "ActivityId",
+      "columns": [
+        {
+          "name": "YomiFirstName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.FirstName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "YomiLastName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.LastName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "YomiCompanyName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{company.CompanyName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "Sender",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Email}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "ToRecipients",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Email}};",
+          "retainNullValues": true
+        },
+        {
+          "name": "Subject",
+          "type": "Bogus",
+          "stringFormatPattern": "{{lorem.Words}};",
+          "retainNullValues": true
+        },
+        {
+          "name": "Description",
+          "type": "Bogus",
+          "stringFormatPattern": "{{lorem.Paragraph}};",
+          "retainNullValues": true
+        }
+      ]
+    },
+
+    {
+      "name": "bct_groupExtensionBase",
+      "primaryKeyColumn": "bct_groupId",
+      "columns": [
+        {
+          "name": "bct_name",
+          "type": "Bogus",
+          "stringFormatPattern": "{{company.CompanyName}}",
+          "retainNullValues": true
+        }
+      ]
+    },
+
+    {
+      "name": "CustomerAddressBase",
+      "primaryKeyColumn": "CustomerAddressId",
+      "columns": [
+        {
+          "name": "Line1",
+          "type": "Bogus",
+          "stringFormatPattern": "{{address.SecondaryAddress}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "Line2",
+          "type": "Bogus",
+          "stringFormatPattern": "{{address.StreetAddress}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "Line3",
+          "type": "Bogus",
+          "stringFormatPattern": "{{address.City}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "Telephone1",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "Telephone2",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "Telephone3",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "Fax",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        }
+
+      ]
+    },
+
+    {
+      "name": "ContactBase",
+      "primaryKeyColumn": "ContactId",
+      "columns": [
+        {
+          "name": "FirstName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.FirstName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "YomiFirstName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.FirstName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "LastName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.LastName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "YomiLastName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.LastName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "NickName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.FirstName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "MiddleName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.LastName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "YomiMiddleName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.LastName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "FullName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.FullName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "YomiFullName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.FullName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "SpousesName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.FullName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "AssistantName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.FullName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "ManagerName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.FullName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "ChildrensNames",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.FullName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "Telephone1",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "Telephone2",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "Telephone3",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "MobilePhone",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "Fax",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "EMailAddress1",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Email}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "EMailAddress2",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Email}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "EMailAddress3",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Email}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "WebSiteURL",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Url}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "FtpSiteURL",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Url}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "JobTitle",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.JobTitle}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "ParentCustomerIdName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{company.CompanyName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "ParentCustomerIdYomiName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{company.CompanyName}}",
+          "retainNullValues": true
+        }
+      ]
+    },
+
+    {
+      "name": "EmailSearchBase",
+      "primaryKeyColumn": "EmailSearchId",
+      "columns": [
+        {
+          "name": "EmailAddress",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Email}}",
+          "retainNullValues": true
+        }
+      ]
+    },
+
+    {
+      "name": "LeadAddressBase",
+      "primaryKeyColumn": "LeadAddressId",
+      "columns": [
+        {
+          "name": "Name",
+          "type": "Bogus",
+          "stringFormatPattern": "{{company.CompanyName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "Line1",
+          "type": "Bogus",
+          "stringFormatPattern": "{{address.SecondaryAddress}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "Line2",
+          "type": "Bogus",
+          "stringFormatPattern": "{{address.StreetAddress}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "Line3",
+          "type": "Bogus",
+          "stringFormatPattern": "{{address.City}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "Telephone1",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "Telephone2",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "Telephone3",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "Fax",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        }
+      ]
+    },
+
+    {
+      "name": "LeadBase",
+      "primaryKeyColumn": "LeadId",
+      "columns": [
+        {
+          "name": "Subject",
+          "type": "Bogus",
+          "stringFormatPattern": "{{lorem.Sentence}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "CompanyName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{company.CompanyName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "FirstName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.FirstName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "YomiFirstName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.FirstName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "LastName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.LastName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "YomiLastName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.LastName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "MiddleName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.LastName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "YomiMiddleName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.LastName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "FullName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.FullName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "YomiFullName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.FullName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "Telephone1",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "Telephone2",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "Telephone3",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "Fax",
+          "type": "PhoneNumber",
+          "retainNullValues": true,
+          "stringFormatPattern": "+852 ########"
+        },
+        {
+          "name": "EMailAddress1",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Email}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "EMailAddress2",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Email}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "EMailAddress3",
+          "type": "Bogus",
+          "stringFormatPattern": "{{internet.Email}}",
+          "retainNullValues": true
+        }
+
+      ]
+    },
+
+    {
+      "name": "OpportunityBase",
+      "primaryKeyColumn": "OpportunityId",
+      "columns": [
+        {
+          "name": "Name",
+          "type": "Bogus",
+          "stringFormatPattern": "{{company.CompanyName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "Description",
+          "type": "Bogus",
+          "stringFormatPattern": "{{Lorem.Paragraph}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "CustomerIdYomiName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{name.FullName}}",
+          "retainNullValues": true
+        },
+        {
+          "name": "CustomerIdName",
+          "type": "Bogus",
+          "stringFormatPattern": "{{company.CompanyName}}",
+          "retainNullValues": true
+        }
+      ]
+    }
+
+  ]
+}

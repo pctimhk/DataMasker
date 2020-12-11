@@ -1,1 +1,1 @@
-~dp0\DataMasker.Runner.exe -c BCTSystems\SPM.json
+%~dp0\DataMasker.Runner.exe -c Systems\MSCRM2011.json
