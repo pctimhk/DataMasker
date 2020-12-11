@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using CommandLine;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -141,8 +141,8 @@ namespace DataMasker.Runner
 
 
                 var rowCount = dataSource.GetCount(tableConfig);
-                UpdateProgress(ProgressType.Masking, 0, (int) rowCount, "Masking Progress");
-                UpdateProgress(ProgressType.Updating, 0, (int) rowCount, "Update Progress");
+                UpdateProgress(ProgressType.Masking, 0, (int)rowCount, "Masking Progress");
+                UpdateProgress(ProgressType.Updating, 0, (int)rowCount, "Update Progress");
 
                 IEnumerable<IDictionary<string, object>> rows = dataSource.GetData(tableConfig);
 

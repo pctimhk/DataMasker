@@ -1,0 +1,1 @@
+~dp0\DataMasker.Runner.exe -c BCTSystems\SPM.json
